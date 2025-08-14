@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PYTHONPATH: .   # make 'app' importable everywhere
+      PYTHONPATH: ${{ github.workspace }}  # ensure 'app' is importable everywhere
 
     steps:
       - name: Check out code
