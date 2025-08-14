@@ -1,0 +1,112 @@
+[
+  {
+    "source": "seed",
+    "source_id": "demo-001",
+    "title": "Midtown Jazz Night at Piedmont Park",
+    "description": "Open-air jazz with local artists. Bring a blanket.",
+    "category": "music",
+    "start_time": "2025-08-15T19:00:00",
+    "end_time": "2025-08-15T21:30:00",
+    "venue_name": "Piedmont Park",
+    "address": "1320 Monroe Dr NE, Atlanta, GA 30306",
+    "city": "Atlanta",
+    "lat": 33.7851,
+    "lon": -84.3738,
+    "price_min": 0,
+    "price_max": 0,
+    "url": "https://example.com/midtown-jazz",
+    "tags": [
+      "outdoors",
+      "date-night",
+      "live-music"
+    ]
+  },
+  {
+    "source": "seed",
+    "source_id": "demo-002",
+    "title": "BeltLine Art Market",
+    "description": "Local makers, food trucks, and live demos along the Eastside Trail.",
+    "category": "market",
+    "start_time": "2025-08-16T11:00:00",
+    "end_time": "2025-08-16T16:00:00",
+    "venue_name": "Atlanta BeltLine Eastside Trail",
+    "address": "659 Auburn Ave NE, Atlanta, GA 30312",
+    "city": "Atlanta",
+    "lat": 33.7566,
+    "lon": -84.3669,
+    "price_min": 0,
+    "price_max": 0,
+    "url": "https://example.com/beltline-market",
+    "tags": [
+      "outdoors",
+      "local",
+      "daytime"
+    ]
+  },
+  {
+    "source": "seed",
+    "source_id": "demo-003",
+    "title": "High Museum Friday Night",
+    "description": "Extended hours with live DJ in the atrium.",
+    "category": "museum",
+    "start_time": "2025-08-15T17:00:00",
+    "end_time": "2025-08-15T22:00:00",
+    "venue_name": "High Museum of Art",
+    "address": "1280 Peachtree St NE, Atlanta, GA 30309",
+    "city": "Atlanta",
+    "lat": 33.7901,
+    "lon": -84.3859,
+    "price_min": 16,
+    "price_max": 25,
+    "url": "https://example.com/high-friday",
+    "tags": [
+      "indoors",
+      "art",
+      "date-night"
+    ]
+  },
+  {
+    "source": "seed",
+    "source_id": "demo-004",
+    "title": "Grant Park Farmers Market",
+    "description": "Fresh produce, coffee, and pastries. Dog-friendly.",
+    "category": "market",
+    "start_time": "2025-08-17T09:00:00",
+    "end_time": "2025-08-17T13:00:00",
+    "venue_name": "Grant Park",
+    "address": "1039 Grant St SE, Atlanta, GA 30315",
+    "city": "Atlanta",
+    "lat": 33.7336,
+    "lon": -84.3729,
+    "price_min": 0,
+    "price_max": 0,
+    "url": "https://example.com/grant-park-market",
+    "tags": [
+      "outdoors",
+      "family",
+      "morning"
+    ]
+  },
+  {
+    "source": "seed",
+    "source_id": "demo-005",
+    "title": "Indie Film Night at Plaza Theatre",
+    "description": "Atlanta indie shorts screening. Q&A with filmmakers.",
+    "category": "film",
+    "start_time": "2025-08-16T19:30:00",
+    "end_time": "2025-08-16T22:00:00",
+    "venue_name": "Plaza Theatre",
+    "address": "1049 Ponce De Leon Ave NE, Atlanta, GA 30306",
+    "city": "Atlanta",
+    "lat": 33.7745,
+    "lon": -84.3511,
+    "price_min": 12,
+    "price_max": 15,
+    "url": "https://example.com/plaza-indie",
+    "tags": [
+      "indoors",
+      "film",
+      "date-night"
+    ]
+  }
+]

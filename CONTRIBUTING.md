@@ -1,0 +1,1 @@
+Solo dev workflow: create branch, run format/lint/tests, open PR on GitHub.
