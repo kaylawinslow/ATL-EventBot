@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .   # make 'app' importable everywhere
 
     steps:
       - name: Check out code
@@ -23,10 +25,7 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt -r requirements-dev.txt
 
-      # Important: add PYTHONPATH when running the seeding scripts
       - name: Prepare DB (init + seed)
-        env:
-          PYTHONPATH: .
         run: |
           python scripts/init_db.py
           python scripts/seed_from_sample.py
@@ -35,6 +34,4 @@ jobs:
         run: flake8 app ingest scripts tests streamlit_app.py
 
       - name: Tests
-        env:
-          PYTHONPATH: .
         run: pytest -q
