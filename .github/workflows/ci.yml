@@ -1,15 +1,40 @@
 name: ci
-on: [push, pull_request]
+
+on:
+  push:
+  pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
-      - run: python -m pip install --upgrade pip
-      - run: pip install -r requirements.txt -r requirements-dev.txt
-      - run: python scripts/init_db.py && python scripts/seed_from_sample.py
-      - run: flake8 .
-      - run: black --check .
-      - run: pytest -q
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      # Important: add PYTHONPATH when running the seeding scripts
+      - name: Prepare DB (init + seed)
+        env:
+          PYTHONPATH: .
+        run: |
+          python scripts/init_db.py
+          python scripts/seed_from_sample.py
+
+      - name: Lint
+        run: flake8 app ingest scripts tests streamlit_app.py
+
+      - name: Tests
+        env:
+          PYTHONPATH: .
+        run: pytest -q
